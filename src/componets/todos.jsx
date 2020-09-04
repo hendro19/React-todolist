@@ -1,29 +1,30 @@
 import React from "react";
 
+import Todo from "./todo";
+
 const Todos = () => {
+  const todos = [
+    {
+      text: "Belajar React"
+    },
+    {
+      text: "Belajar Hooks"
+    },
+    {
+      text: "Belajar React"
+    },
+    {
+      text: "Belajar React"
+    },
+    {
+      text: "Belajar React"
+    }
+  ];
   return (
     <section className="todos">
-      <div className="todo">
-        <span className="todo-text">Lering path</span>
-      </div>
-      <div className="todo">
-        <span className="todo-text">Lering path</span>
-      </div>
-      <div className="todo">
-        <span className="todo-text">Lering path</span>
-      </div>
-      <div className="todo">
-        <span className="todo-text">Lering path</span>
-      </div>
-      <div className="todo">
-        <span className="todo-text">Lering path</span>
-      </div>
-      <div className="todo">
-        <span className="todo-text">Lering path</span>
-      </div>
-      <div className="todo">
-        <span className="todo-text">Lering path</span>
-      </div>
+      {todos.map((todo) => {
+        return <Todo text={todo.text} />;
+      })}
     </section>
   );
 };
